@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "nodemon server/index.js",
-    "build": "npx prisma generate && npx prisma db push",
+    "build": "npx prisma generate",
     "postinstall": "npx prisma generate"
   },
   "dependencies": {
