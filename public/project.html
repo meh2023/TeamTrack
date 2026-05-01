@@ -29,15 +29,15 @@
         <button class="btn btn-primary btn-sm" id="add-task-btn" onclick="openModal('task-modal')">+ Add Task</button>
       </div>
       <div class="kanban" id="kanban">
-        <div class="kanban-col col-todo">
+        <div class="kanban-col col-todo" ondragover="handleDragOver(event)" ondrop="handleDrop(event, 'TODO')">
           <div class="kanban-col-header"><span class="dot"></span>To Do<span class="count" id="count-todo">0</span></div>
           <div id="col-todo-tasks"></div>
         </div>
-        <div class="kanban-col col-progress">
+        <div class="kanban-col col-progress" ondragover="handleDragOver(event)" ondrop="handleDrop(event, 'IN_PROGRESS')">
           <div class="kanban-col-header"><span class="dot"></span>In Progress<span class="count" id="count-progress">0</span></div>
           <div id="col-progress-tasks"></div>
         </div>
-        <div class="kanban-col col-done">
+        <div class="kanban-col col-done" ondragover="handleDragOver(event)" ondrop="handleDrop(event, 'DONE')">
           <div class="kanban-col-header"><span class="dot"></span>Done<span class="count" id="count-done">0</span></div>
           <div id="col-done-tasks"></div>
         </div>

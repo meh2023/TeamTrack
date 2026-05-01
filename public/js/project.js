@@ -91,7 +91,7 @@ function renderTaskCards(tasks, currentStatus) {
     const editBtnHtml = canEdit ? `<button class="btn btn-secondary btn-sm" style="padding:.2rem .5rem;font-size:.65rem" onclick='openEditTask(${JSON.stringify(t).replace(/'/g, "\\'")})'>✎</button>` : '';
 
     return `
-      <div class="task-card">
+      <div class="task-card" ${canEdit ? `draggable="true" ondragstart="handleDragStart(event, '${t.id}')" ondragend="handleDragEnd(event)"` : ''}>
         <div style="display:flex;justify-content:space-between;align-items:start;gap:.4rem">
           <div class="task-title">${esc(t.title)}</div>
           <div style="display:flex;gap:.2rem;flex-shrink:0">${editBtnHtml}${deleteBtnHtml}</div>
@@ -107,6 +107,35 @@ function renderTaskCards(tasks, currentStatus) {
       </div>
     `;
   }).join('');
+}
+
+// Drag and Drop Logic
+let draggedTaskId = null;
+
+function handleDragStart(e, id) {
+  draggedTaskId = id;
+  e.dataTransfer.effectAllowed = 'move';
+  setTimeout(() => e.target.style.opacity = '0.4', 0); // Visual feedback
+}
+
+function handleDragEnd(e) {
+  e.target.style.opacity = '1';
+}
+
+function handleDragOver(e) {
+  e.preventDefault(); // Necessary to allow dropping
+  e.dataTransfer.dropEffect = 'move';
+}
+
+async function handleDrop(e, newStatus) {
+  e.preventDefault();
+  if (!draggedTaskId) return;
+  
+  const taskId = draggedTaskId;
+  draggedTaskId = null;
+  
+  // Instantly trigger the status change (the API call handles the reload)
+  await changeStatus(taskId, newStatus);
 }
 
 function statusLabel(s) {
