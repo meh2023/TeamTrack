@@ -3,58 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="TeamTrack — Project management with role-based access control">
-  <title>TeamTrack — Login</title>
+  <meta name="description" content="TeamTrack — Manage your team's workflow effortlessly">
+  <title>TeamTrack — Manage Projects Better</title>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-  <div class="auth-wrapper">
-    <div class="auth-card" id="auth-card">
-      <div class="logo"><img src="/img/logo.png" alt="TeamTrack Logo">TeamTrack</div>
-      <p class="subtitle">Manage projects, assign tasks, track progress.</p>
-
-      <div class="auth-tabs">
-        <button class="active" id="tab-login" onclick="showTab('login')">Login</button>
-        <button id="tab-signup" onclick="showTab('signup')">Sign Up</button>
-      </div>
-
-      <!-- Login Form -->
-      <form id="login-form" onsubmit="handleLogin(event)">
-        <div class="form-group">
-          <label for="login-email">Email</label>
-          <input type="email" id="login-email" required placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="login-password">Password</label>
-          <input type="password" id="login-password" required placeholder="••••••••">
-        </div>
-        <div class="error-msg" id="login-error"></div>
-        <button type="submit" class="btn btn-primary" id="login-btn">Login</button>
-      </form>
-
-      <!-- Signup Form -->
-      <form id="signup-form" style="display:none" onsubmit="handleSignup(event)">
-        <div class="form-group">
-          <label for="signup-name">Full Name</label>
-          <input type="text" id="signup-name" required placeholder="John Doe">
-        </div>
-        <div class="form-group">
-          <label for="signup-email">Email</label>
-          <input type="email" id="signup-email" required placeholder="you@example.com">
-        </div>
-        <div class="form-group">
-          <label for="signup-password">Password</label>
-          <input type="password" id="signup-password" required placeholder="Min 6 characters" minlength="6">
-        </div>
-        <div class="error-msg" id="signup-error"></div>
-        <button type="submit" class="btn btn-primary" id="signup-btn">Create Account</button>
-      </form>
+  <!-- Navbar -->
+  <nav class="landing-nav">
+    <div class="logo"><img src="/img/logo.png" alt="TeamTrack Logo">TeamTrack</div>
+    <div class="nav-links">
+      <a href="/login.html" class="nav-link">Log In</a>
+      <a href="/login.html" class="btn btn-primary btn-sm">Sign Up</a>
     </div>
-  </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="landing-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Supercharge Your Team's Productivity.</h1>
+      <p class="hero-subtitle">The modern, beautiful project management tool built for agile teams. Track tasks, manage roles, and ship faster.</p>
+      <div class="hero-actions">
+        <a href="/login.html" class="btn btn-primary">Get Started for Free</a>
+      </div>
+    </div>
+    
+    <div class="hero-graphic">
+      <div class="glass-mockup">
+        <div class="mockup-header">
+           <div class="dots"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+           <div class="mockup-title">teamtrack.app</div>
+        </div>
+        <div class="mockup-body">
+           <div class="mockup-sidebar"></div>
+           <div class="mockup-kanban">
+             <div class="mockup-col">
+               <div class="mockup-card"></div>
+               <div class="mockup-card short"></div>
+             </div>
+             <div class="mockup-col">
+               <div class="mockup-card"></div>
+             </div>
+             <div class="mockup-col"></div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Footer -->
+  <footer class="landing-footer">
+    <div class="logo"><img src="/img/logo.png" alt="TeamTrack Logo">TeamTrack</div>
+    <p>© 2026 TeamTrack. Built for collaboration.</p>
+  </footer>
 
   <button class="theme-toggle" id="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">☀️</button>
   <script src="/js/theme.js"></script>
-  <script src="/js/api.js"></script>
-  <script src="/js/auth.js"></script>
 </body>
 </html>

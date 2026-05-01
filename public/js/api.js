@@ -19,7 +19,7 @@ function getUser() {
 function logout() {
   localStorage.removeItem('tf_token');
   localStorage.removeItem('tf_user');
-  window.location.href = '/';
+  window.location.href = '/login.html';
 }
 
 async function api(path, options = {}) {
@@ -58,7 +58,7 @@ function initials(name) {
 
 function requireAuth() {
   if (!getToken()) {
-    window.location.href = '/';
+    window.location.href = '/login.html';
     return false;
   }
   return true;
