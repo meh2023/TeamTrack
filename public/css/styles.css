@@ -65,14 +65,26 @@ input, select, textarea { font-family: inherit; }
   box-shadow: var(--shadow);
 }
 
-.auth-card .logo {
-  font-size: 1.6rem;
+.auth-card .logo, .sidebar .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
   font-weight: 800;
-  text-align: center;
-  margin-bottom: .3rem;
   background: var(--grad);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.auth-card .logo {
+  font-size: 1.6rem;
+  justify-content: center;
+  margin-bottom: .3rem;
+}
+
+.logo img {
+  height: 1.4em;
+  width: auto;
+  border-radius: 8px;
 }
 
 .auth-card .subtitle {
@@ -208,10 +220,6 @@ input, select, textarea { font-family: inherit; }
 
 .sidebar .logo {
   font-size: 1.3rem;
-  font-weight: 800;
-  background: var(--grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   margin-bottom: 2rem;
 }
 
