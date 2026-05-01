@@ -31,4 +31,4 @@ A full-stack project management web app with role-based access control, built fo
 
 
 ## 📹 Demo Video
-[Watch the demo video](./demo.md)
+[Watch the demo video](https://www.tella.tv/video/levis-video-ccbt)
