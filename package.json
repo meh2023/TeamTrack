@@ -1,5 +1,5 @@
 {
-  "name": "taskflow",
+  "name": "teamtrack",
   "version": "1.0.0",
   "description": "Project management app with role-based access",
   "main": "server/index.js",

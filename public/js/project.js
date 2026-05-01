@@ -56,7 +56,7 @@ function renderHeader(p) {
     </div>
     ${p.description ? `<p style="color:var(--text-dim);font-size:.88rem;margin-top:.4rem">${esc(p.description)}</p>` : ''}
   `;
-  document.title = `TaskFlow — ${p.name}`;
+  document.title = `TeamTrack — ${p.name}`;
 }
 
 function renderKanban(tasks) {
