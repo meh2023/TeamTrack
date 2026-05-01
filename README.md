@@ -1,4 +1,4 @@
-# ⚡ TeamTrack — Team Task Manager
+# TeamTrack — Team Task Manager
 
 A full-stack project management web app with role-based access control, built for team collaboration.
 
