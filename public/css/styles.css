@@ -3,34 +3,43 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #041c1a;
-  --bg-card: rgba(20, 92, 84, 0.15);
-  --bg-card-hover: rgba(20, 92, 84, 0.25);
-  --border: rgba(0, 255, 204, 0.15);
-  --text: #f8fafc;
-  --text-dim: #94a3b8;
-  --accent: #00ffcc;
-  --accent2: #14b8a6;
-  --grad: linear-gradient(135deg, #0d9488, #042f2e);
-  --green: #34d399;
-  --amber: #fbbf24;
-  --red: #f87171;
-  --blue: #2dd4bf;
-  --radius: 12px;
-  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  /* Slack Dark Mode Colors */
+  --bg: #1a1d21;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --text: #d1d2d3;
+  --text-dim: #ababad;
+  
+  /* Slack Brand Accents */
+  --accent: #36C5F0; /* Slack Blue */
+  --accent2: #4A154B; /* Slack Aubergine */
+  --grad: linear-gradient(135deg, #4A154B, #E01E5A); /* Aubergine to Red gradient for primary buttons */
+  
+  /* Slack Semantic Colors */
+  --green: #2EB67D;
+  --amber: #ECB22E;
+  --red: #E01E5A;
+  --blue: #36C5F0;
+  
+  --radius: 8px; /* Slack uses slightly sharper corners */
+  --shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 [data-theme="light"] {
-  --bg: #f0fdfa;
+  /* Slack Light Mode Colors */
+  --bg: #F4EDE4; /* Slack soft beige/white */
   --bg-card: #ffffff;
-  --bg-card-hover: #f1f5f9;
-  --border: #99f6e4;
-  --text: #042f2e;
-  --text-dim: #115e59;
-  --accent: #0d9488;
-  --accent2: #0f766e;
-  --grad: linear-gradient(135deg, #14b8a6, #0d9488);
-  --shadow: 0 4px 12px rgba(0,0,0,0.05);
+  --bg-card-hover: #f8f8f8;
+  --border: #dddddd;
+  --text: #1d1c1d;
+  --text-dim: #616061;
+  
+  --accent: #4A154B; /* Slack Aubergine */
+  --accent2: #36C5F0; /* Slack Blue */
+  --grad: linear-gradient(135deg, #4A154B, #E01E5A);
+  
+  --shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 html { font-size: 15px; }
